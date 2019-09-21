@@ -13,7 +13,7 @@ import { CalculadoraService } from './services';
     CalculadoraComponent
   ],
   providers: [
-    CalculadoraService
+    CalculadoraService    
   ]
 })
 export class CalculadoraModule { }
