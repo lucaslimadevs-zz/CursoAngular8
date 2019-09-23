@@ -39,7 +39,7 @@ export class CalculadoraComponent implements OnInit {
 
   concatenarNumero(numAtual: string, numConcat: string): string {
     // caso contenha apenas '0' ou null, reinicia o valor 
-    if (numConcat === '0' || numAtual === null){
+    if (numAtual === '0' || numAtual === null){
       numAtual = '';
     }
 
@@ -59,12 +59,12 @@ export class CalculadoraComponent implements OnInit {
   definirOperacao(operacao :string): void{
     //apenas define a operação caso não exista uma
     if (this.operacao === null) {
-      this.operacao === operacao;
+      this.operacao = operacao;
       return;
     }
 
     // caso operação definida e numero 2 selecionado, efetua o calculo da operação
-    if (this.numero2 != null) {
+    if (this.numero2 !== null) {
       this.resultado = this.calculadoraSevice.calcular(
         parseFloat(this.numero1),
         parseFloat(this.numero2),
